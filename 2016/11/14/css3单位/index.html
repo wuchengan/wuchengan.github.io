@@ -30,7 +30,7 @@ rem  en
 (1). vw vh
 1.vw是相对于视窗口的宽度而定的，场电影等于视窗口的款的的1/100,加入浏览器的宽度为100px,那么1vw就等于1px;(100px/100)
 2.vh是相对视口（v">
-<meta property="og:updated_time" content="2016-11-14T13:18:40.000Z">
+<meta property="og:updated_time" content="2016-11-14T13:29:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css3单位">
 <meta name="twitter:description" content="谈谈css3的长度单位在css3中,有很多长度单位
@@ -216,15 +216,22 @@ rem  en
 <p>（2）vmin、vmax<br>vmin和vmax是相对于视口的高度和宽度两者之间的最小值或最大值。</p>
 <p>如果浏览器的高为300px、宽为500px，那么1vmin就是3px，1vmax就是5px；如果浏览器的高为800px，宽为1080px，那么1vmin也是8px，1vmax也是10.8px。</p>
 <p>兼容性：兼容性</p>
-<p>2、rem<br>rem是相对于根元素（html）的字体大小（font-size）来计算的长度单位。<br>html{font-size: 62.5%}  /<em> 10 ÷ 16 × 100% = 62.5% </em>/</p>
-<p>body{font-size: 1.4rem;} /<em> 1.4 × 10px = 14px </em>/<br>如果你没有设置html的字体大小，就会以浏览器默认字体大小，一般是16px。</p>
-<p>注意：由于浏览器默认最小字体大小的限制，如果设置的根元素字体大小小于默认最小字体大小，那么就会以默认最小字体大小设置根元素。比如：在chrome中，最小字体大小是12px，如果你设置的字体大小小于12px，还是会以12px设置：<br>html{font-size: 62.5%}  /<em> 16px </em> 62.5% = 10px */</p>
-<p>body{font-size: 1.4rem;} /<em> 1.4rem </em> 12px = 16.8px */<br>本意设置body的字体大小为14px，可是实际上却是16.8px，就是因为10px小于12px，所以采取了12px。</p>
-<p>所以，我一般都是这样设置：<br>html{font-size: 20px;}</p>
-<p>body{font-size: 0.7rem;}  /<em> 0.7 </em> 20px = 14px */</p>
-<p>说到rem，我们还会想到em，两者都是相对单位，由浏览器转换为像素值，那两者有什么区别？使用哪个更好呢？</p>
+<p>2、rem<br>rem是相对于根元素（html）的字体大小（font-size）来计算的长度单位。</p>
+<pre><code>html{font-size: 62.5%}  /* 10 ÷ 16 × 100% = 62.5% */
+body{font-size: 1.4rem;} /* 1.4 × 10px = 14px */
+</code></pre><p>如果你没有设置html的字体大小，就会以浏览器默认字体大小，一般是16px。</p>
+<p>注意：由于浏览器默认最小字体大小的限制，如果设置的根元素字体大小小于默认最小字体大小，那么就会以默认最小字体大小设置根元素。比如：在chrome中，最小字体大小是12px，如果你设置的字体大小小于12px，还是会以12px设置：</p>
+<pre><code>html{font-size: 62.5%}  /* 16px * 62.5% = 10px */
+
+body{font-size: 1.4rem;} /* 1.4rem * 12px = 16.8px */
+</code></pre><p>本意设置body的字体大小为14px，可是实际上却是16.8px，就是因为10px小于12px，所以采取了12px。</p>
+<p>所以，我一般都是这样设置：</p>
+<pre><code>html{font-size: 20px;}
+
+body{font-size: 0.7rem;}  /* 0.7 * 20px = 14px */
+</code></pre><p>说到rem，我们还会想到em，两者都是相对单位，由浏览器转换为像素值，那两者有什么区别？使用哪个更好呢？</p>
 <p>rem与em的区别：<br>rem是相对于根元素（html）的字体大小，而em是相对于其父元素的字体大小<br>em最多取到小数点的后三位</p>
-<style>
+<pre><code>&lt;style&gt;
   html{ font-size: 20px; }
   body{ 
     font-size: 1.4rem;  /* 1rem = 28px */
@@ -237,12 +244,19 @@ rem  en
     font-size:1rem;  /* 1rem = 20px */
     padding: 0.9em;  /* 1em = 18px */
   }
-</style>
+&lt;/style&gt;
 
-<p><html><br>  <body><br>    <div><br>      <span></span><br>    </div><br>  </body><br></html><br>在上面的代码中，我们将根元素（html）的字体大小font-size设为20px，body的字体大小设为1rem，那么转换为像素就是28px（20 × 1.4），接着我们又将div的padding设为1em，由于其基于父元素，所以转换为像素是28px ( 28 × 1），然后我们又将span的字体大小设为1rem，也就是20px，由于其自身设置了字体大小，所以padding设为1em，转换为像素是20px(20 × 1），而不是乘以其父元素的字体大小28px(28 × 1）。</p>
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;div&gt;   
+      &lt;span&gt;&lt;/span&gt;  
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>在上面的代码中，我们将根元素（html）的字体大小font-size设为20px，body的字体大小设为1rem，那么转换为像素就是28px（20 × 1.4），接着我们又将div的padding设为1em，由于其基于父元素，所以转换为像素是28px ( 28 × 1），然后我们又将span的字体大小设为1rem，也就是20px，由于其自身设置了字体大小，所以padding设为1em，转换为像素是20px(20 × 1），而不是乘以其父元素的字体大小28px(28 × 1）。</p>
 <p>注意：当元素自身设置了字体大小，那么如果它的其他css属性也使用em单位，则会基于它自身的字体大小。（就像上面例子的span的padding一样）</p>
 <p>基于上面这些原因，个人更倾向于使用rem，因为em使用不当的话，当出现多层继承时，会很容易混淆，比如：</p>
-<style>
+<pre><code>&lt;style&gt;
   html{ font-size: 20px; }
   body{ 
     font-size: 0.9em;  /* 1rem = 18px */
@@ -253,14 +267,21 @@ rem  en
   span{
     font-size: 0.9em;  /* 1rem = 12.96px */
   }
-</style>
+&lt;/style&gt;
 
-<p><html><br>  <body><br>    <div><br>      <span></span><br>    </div><br>  </body><br></html><br>看到没有，使用em时，如果其祖先元素都是用了em，那么就会像上面一样，body继承其父元素html的字体大小，而div又继承其父元素body的字体大小，而span又继承其父元素div的字体大小，最终span的字体大小最终是12.96px（20 × 0.9 ×0.8 × 0.9）。</p>
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;div&gt;   
+      &lt;span&gt;&lt;/span&gt;  
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>看到没有，使用em时，如果其祖先元素都是用了em，那么就会像上面一样，body继承其父元素html的字体大小，而div又继承其父元素body的字体大小，而span又继承其父元素div的字体大小，最终span的字体大小最终是12.96px（20 × 0.9 ×0.8 × 0.9）。</p>
 <p>而rem总是相对于根元素（html）的，也就是说，不管哪里使用了rem单位，都是根元素的字体大小 × 数字，由浏览器转为像素值。</p>
 <p>对于rem的兼容性，无须担心，点击查看：兼容性</p>
 <p>当然，em和rem各有优缺点，简单的使用规则：<br>如果这个属性根据它的font-size进行测量，则使用em<br>其他的一切事物属性均使用rem.</p>
 <p>两者都不使用的情况：<br>多列布局，一般使用百分比%</p>
-<p>这里提供了一个px、em、rem单位的转换工具：<a><a href="http://pxtoem.com/" target="_blank" rel="external">http://pxtoem.com/</a></a></p>
+<p>这里提供了一个px、em、rem单位的转换工具：<a href="http://pxtoem.com/" target="_blank" rel="external">http://pxtoem.com/</a></p>
 
       
     </div>
