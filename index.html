@@ -65,6 +65,88 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/21/css/" class="article-date">
+  <time datetime="2016-11-21T07:06:23.000Z" itemprop="datePublished">2016-11-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/21/css/">css垂直居中和水平居中</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="内联元素居中方案"><a href="#内联元素居中方案" class="headerlink" title="内联元素居中方案"></a>内联元素居中方案</h2><pre><code>水平居中设置：
+1.行内元素 设置 text-align:center
+2.Flex布局 设置display:flex;justify-content:center;
+
+垂直居中设置：
+1.父元素高度确定的单行文本（内联元素） 设置height = line-height
+2.父元素高度确定的多行文本（内联元素） a:插入table （插入方法和水平居中一样）后设置vertical-align:middle;b:先设置 display:table-celll 在设置vertical-align:middle;
+</code></pre><h2 id="块级元素居中方案"><a href="#块级元素居中方案" class="headerlink" title="块级元素居中方案"></a>块级元素居中方案</h2><pre><code>水平居中设置
+1.定宽块状元素 设置 左右 margin 值为auto；
+2.不定宽块元素 a:在元素外加入table标签(完整的，包括tabletbody，tr，td)，该元素卸载td内，然后设置margin的值为auto；b:给该元素设置display：inine方法；c:父元素设置position：relative 和left：50%，子元素设置position：relative和left：50%
+
+
+垂直居中设置
+1.使用position：absolut（fixed），设置left，top，margin-left，margin-top的属性
+</code></pre><h2 id="垂直居中设置："><a href="#垂直居中设置：" class="headerlink" title="垂直居中设置："></a>垂直居中设置：</h2><pre><code>1.box{
+    position:absolute;
+    top:50%
+    left:50%
+    margin-top:-(元素高度一半)；
+    margin-left:-(元素宽度一半)；
+}
+
+2.flex
+.box{
+display: -webkit-box;
+display: -webkit-flex;
+display: -moz-box;
+display: -moz-flex;
+display: -ms-flexbox;
+display: flex;
+水平居中
+-webkit-box-align: center;
+-moz-box-align: center;
+-ms-flex-pack:center;
+-webkit-justify-content: center;
+-moz-justify-content: center;
+justify-content: center;
+ 垂直居中
+-webkit-box-pack: center;
+-moz-box-pack: center;
+-ms-flex-align:center;
+-webkit-align-items: center;
+-moz-align-items: center;
+align-items: center;
+}
+</code></pre><p>提醒：flex不是所有的浏览器都支持的现在谨慎布局    </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/21/css/" data-id="civrrfwk70000rfs7s7ow5egz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JavaScript" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/06/19/JavaScript/" class="article-date">
@@ -114,7 +196,7 @@ for-in语句
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/19/JavaScript/" data-id="civoxob990009ucs7yxgqhwjx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/06/19/JavaScript/" data-id="civrrfwm4000arfs73opyxkhf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -188,7 +270,7 @@ db是空的话，show dbs看不到
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/05/16/mongodb/" data-id="civoxob7v0003ucs7tuaucm7o" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/05/16/mongodb/" data-id="civrrfwkh0004rfs7luq9lyqr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -226,7 +308,7 @@ db是空的话，show dbs看不到
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/02/15/gulp/" data-id="civoxob7r0001ucs7jctecrgy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/02/15/gulp/" data-id="civrrfwkl0005rfs7twdl6qmm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -361,7 +443,7 @@ body{font-size: 0.7rem;}  /* 0.7 * 20px = 14px */
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/14/css3单位/" data-id="civoxob7n0000ucs79a240173" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/14/css3单位/" data-id="civrrfwkd0002rfs78f5skz1w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -430,7 +512,7 @@ css 如下
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/12/坑中的战火/" data-id="civoxob7y0004ucs7zxc7g6f6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/12/坑中的战火/" data-id="civrrfwkq0007rfs72ycywhpg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -473,7 +555,7 @@ css 如下
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/12/懒人的世界/" data-id="civoxob810005ucs7t4cp705y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/12/懒人的世界/" data-id="civrrfwko0006rfs7h98r93h2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/">学习</a></li></ul>
@@ -520,7 +602,7 @@ css 如下
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/01/hello-world/" data-id="civoxob7u0002ucs76sg192gy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/01/hello-world/" data-id="civrrfwkg0003rfs7dfg00m50" class="article-share-link">Share</a>
       
       
     </footer>
@@ -561,7 +643,7 @@ css 如下
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li></ul>
     </div>
   </div>
 
@@ -572,6 +654,10 @@ css 如下
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/11/21/css/">css垂直居中和水平居中</a>
+          </li>
         
           <li>
             <a href="/2015/06/19/JavaScript/">JavaScript</a>
@@ -587,10 +673,6 @@ css 如下
         
           <li>
             <a href="/2015/01/14/css3单位/">css3单位</a>
-          </li>
-        
-          <li>
-            <a href="/2015/01/12/坑中的战火/">学习路上的坑</a>
           </li>
         
       </ul>

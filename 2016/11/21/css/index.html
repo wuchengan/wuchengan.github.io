@@ -3,21 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | Wuca</title>
+  <title>css垂直居中和水平居中 | Wuca</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="内联元素居中方案水平居中设置：
+1.行内元素 设置 text-align:center
+2.Flex布局 设置display:flex;justify-content:center;
+
+垂直居中设置：
+1.父元素高度确定的单行文本（内联元素） 设置height = line-height
+2.父元素高度确定的多行文本（内联元素） a:插入table （插入方法和水平居中一样）后设置vertical">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2015/01/01/hello-world/index.html">
+<meta property="og:title" content="css垂直居中和水平居中">
+<meta property="og:url" content="http://yoursite.com/2016/11/21/css/index.html">
 <meta property="og:site_name" content="Wuca">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-11-14T12:15:14.000Z">
+<meta property="og:description" content="内联元素居中方案水平居中设置：
+1.行内元素 设置 text-align:center
+2.Flex布局 设置display:flex;justify-content:center;
+
+垂直居中设置：
+1.父元素高度确定的单行文本（内联元素） 设置height = line-height
+2.父元素高度确定的多行文本（内联元素） a:插入table （插入方法和水平居中一样）后设置vertical">
+<meta property="og:updated_time" content="2016-11-21T07:37:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="css垂直居中和水平居中">
+<meta name="twitter:description" content="内联元素居中方案水平居中设置：
+1.行内元素 设置 text-align:center
+2.Flex布局 设置display:flex;justify-content:center;
+
+垂直居中设置：
+1.父元素高度确定的单行文本（内联元素） 设置height = line-height
+2.父元素高度确定的多行文本（内联元素） a:插入table （插入方法和水平居中一样）后设置vertical">
   
     <link rel="alternate" href="/atom.xml" title="Wuca" type="application/atom+xml">
   
@@ -70,10 +85,10 @@ Quick">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-css" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/01/01/hello-world/" class="article-date">
-  <time datetime="2014-12-31T16:00:00.000Z" itemprop="datePublished">2015-01-01</time>
+    <a href="/2016/11/21/css/" class="article-date">
+  <time datetime="2016-11-21T07:06:23.000Z" itemprop="datePublished">2016-11-21</time>
 </a>
     
   </div>
@@ -84,7 +99,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      css垂直居中和水平居中
     </h1>
   
 
@@ -92,20 +107,57 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="内联元素居中方案"><a href="#内联元素居中方案" class="headerlink" title="内联元素居中方案"></a>内联元素居中方案</h2><pre><code>水平居中设置：
+1.行内元素 设置 text-align:center
+2.Flex布局 设置display:flex;justify-content:center;
+
+垂直居中设置：
+1.父元素高度确定的单行文本（内联元素） 设置height = line-height
+2.父元素高度确定的多行文本（内联元素） a:插入table （插入方法和水平居中一样）后设置vertical-align:middle;b:先设置 display:table-celll 在设置vertical-align:middle;
+</code></pre><h2 id="块级元素居中方案"><a href="#块级元素居中方案" class="headerlink" title="块级元素居中方案"></a>块级元素居中方案</h2><pre><code>水平居中设置
+1.定宽块状元素 设置 左右 margin 值为auto；
+2.不定宽块元素 a:在元素外加入table标签(完整的，包括tabletbody，tr，td)，该元素卸载td内，然后设置margin的值为auto；b:给该元素设置display：inine方法；c:父元素设置position：relative 和left：50%，子元素设置position：relative和left：50%
+
+
+垂直居中设置
+1.使用position：absolut（fixed），设置left，top，margin-left，margin-top的属性
+</code></pre><h2 id="垂直居中设置："><a href="#垂直居中设置：" class="headerlink" title="垂直居中设置："></a>垂直居中设置：</h2><pre><code>1.box{
+    position:absolute;
+    top:50%
+    left:50%
+    margin-top:-(元素高度一半)；
+    margin-left:-(元素宽度一半)；
+}
+
+2.flex
+.box{
+display: -webkit-box;
+display: -webkit-flex;
+display: -moz-box;
+display: -moz-flex;
+display: -ms-flexbox;
+display: flex;
+水平居中
+-webkit-box-align: center;
+-moz-box-align: center;
+-ms-flex-pack:center;
+-webkit-justify-content: center;
+-moz-justify-content: center;
+justify-content: center;
+ 垂直居中
+-webkit-box-pack: center;
+-moz-box-pack: center;
+-ms-flex-align:center;
+-webkit-align-items: center;
+-moz-align-items: center;
+align-items: center;
+}
+</code></pre><p>提醒：flex不是所有的浏览器都支持的现在谨慎布局    </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/01/hello-world/" data-id="civrrfwkg0003rfs7dfg00m50" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/11/21/css/" data-id="civrrfwk70000rfs7s7ow5egz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -114,15 +166,11 @@ Quick">
     
 <nav id="article-nav">
   
-    <a href="/2015/01/12/懒人的世界/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          懒人的世界
-        
-      </div>
-    </a>
   
+    <a href="/2015/06/19/JavaScript/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JavaScript</div>
+    </a>
   
 </nav>
 
